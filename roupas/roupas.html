@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de roupas — Alugaê</title>
+  <meta name="description" content="Catálogo de vestidos, ternos, smokings e calçados de gala para aluguel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../home/style.css">
+  <link rel="stylesheet" href="roupas.css">
+</head>
+<body>
+
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Alugaê — página inicial">Alugaê</a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">Menu</label>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="../home/index.html">Início</a>
+        <a href="roupas.html" aria-current="page">Roupas</a>
+        <a href="sobre.html">Sobre o projeto</a>
+        <a href="cliente.html">Cadastrar Cliente</a>
+        <a class="btn btn-small" href="contato.html">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ TÍTULO DA PÁGINA ============ -->
+    <section class="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Você está em">
+          <a href="index.html">Início</a> / Roupas
+        </nav>
+        <h1>Catálogo de roupas</h1>
+        <p>Escolha a peça e confira os tamanhos disponíveis para a data do seu evento.</p>
+      </div>
+    </section>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section class="catalogo" aria-label="Lista de peças">
+      <div class="container">
+
+        <div class="filtros" role="radiogroup" aria-label="Filtrar por categoria">
+          <input type="radio" name="filtro" id="f-todas" checked>
+          <label for="f-todas">Todas</label>
+
+          <input type="radio" name="filtro" id="f-vestidos">
+          <label for="f-vestidos">Vestidos</label>
+
+          <input type="radio" name="filtro" id="f-ternos">
+          <label for="f-ternos">Ternos</label>
+
+          <input type="radio" name="filtro" id="f-smokings">
+          <label for="f-smokings">Smokings</label>
+
+          <input type="radio" name="filtro" id="f-calcados">
+          <label for="f-calcados">Calçados</label>
+        </div>
+
+        <ul class="cards">
+          <li class="card" data-cat="vestidos">
+            <img src="img/vestido-longo.svg" alt="Vestido longo azul-noite">
+            <div class="card-body">
+              <p class="card-cat">Vestido</p>
+              <h3>Vestido longo azul-noite</h3>
+              <p class="card-meta">Tamanhos: 38, 40, 44</p>
+              <p class="card-price">R$ 220 <span>por locação</span></p>
+              <span class="tag tag-ok">Disponível</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="vestidos">
+            <img src="img/vestido-longo.svg" alt="Vestido sereia">
+            <div class="card-body">
+              <p class="card-cat">Vestido</p>
+              <h3>Vestido sereia</h3>
+              <p class="card-meta">Tamanhos: 36, 38, 42</p>
+              <p class="card-price">R$ 260 <span>por locação</span></p>
+              <span class="tag tag-poucas">Poucas unidades</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="ternos">
+            <img src="img/terno-classico.svg" alt="Terno clássico">
+            <div class="card-body">
+              <p class="card-cat">Terno</p>
+              <h3>Terno clássico azul</h3>
+              <p class="card-meta">Tamanhos: 46, 48, 50, 52</p>
+              <p class="card-price">R$ 180 <span>por locação</span></p>
+              <span class="tag tag-ok">Disponível</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="ternos">
+            <img src="img/terno-classico.svg" alt="Terno slim">
+            <div class="card-body">
+              <p class="card-cat">Terno</p>
+              <h3>Terno slim cinza</h3>
+              <p class="card-meta">Tamanhos: 44, 46, 48</p>
+              <p class="card-price">R$ 190 <span>por locação</span></p>
+              <span class="tag tag-no">Reservado</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="smokings">
+            <img src="img/smoking.svg" alt="Smoking">
+            <div class="card-body">
+              <p class="card-cat">Smoking</p>
+              <h3>Smoking clássico</h3>
+              <p class="card-meta">Tamanhos: 46, 48, 50</p>
+              <p class="card-price">R$ 250 <span>por locação</span></p>
+              <span class="tag tag-ok">Disponível</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="smokings">
+            <img src="img/smoking.svg" alt="Smoking com colete">
+            <div class="card-body">
+              <p class="card-cat">Smoking</p>
+              <h3>Smoking com colete</h3>
+              <p class="card-meta">Tamanhos: 48, 50, 52</p>
+              <p class="card-price">R$ 280 <span>por locação</span></p>
+              <span class="tag tag-poucas">Poucas unidades</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="calcados">
+            <img src="img/sapato-social.svg" alt="Sapato social">
+            <div class="card-body">
+              <p class="card-cat">Calçado</p>
+              <h3>Sapato social preto</h3>
+              <p class="card-meta">Tamanhos: 38 ao 44</p>
+              <p class="card-price">R$ 60 <span>por locação</span></p>
+              <span class="tag tag-ok">Disponível</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+          <li class="card" data-cat="calcados">
+            <img src="img/sapato-social.svg" alt="Sapato verniz">
+            <div class="card-body">
+              <p class="card-cat">Calçado</p>
+              <h3>Sapato verniz</h3>
+              <p class="card-meta">Tamanhos: 39 ao 43</p>
+              <p class="card-price">R$ 70 <span>por locação</span></p>
+              <span class="tag tag-ok">Disponível</span>
+              <a class="btn btn-small" href="contato.html">Solicitar aluguel</a>
+            </div>
+          </li>
+        </ul>
+
+        <p class="note">Peças, tamanhos, valores e disponibilidade são exemplos.</p>
+
+        <div class="catalogo-cta">
+          <p>Não encontrou o que procura? Fale com a nossa equipe.</p>
+          <a class="btn" href="contato.html">Fale conosco</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo-light" href="index.html">Alugaê</a>
+        <p>Aluguel de roupas de gala.</p>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="footer-title">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="roupas.html">Roupas</a></li>
+          <li><a href="sobre.html">Sobre o projeto</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-title">Projeto Integrador</h2>
+        <p>Engenharia de Software II<br>Prof. Celso Gallão<br>Fatec São Caetano do Sul – Antonio Russo</p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Equipe</h2>
+        <ul>
+          <li>Matheus Giovanelli</li>
+          <li>Lucas Toledo Porfírio</li>
+          <li>Daniel Voros Monteiro</li>
+          <li>Gabriel Alves Metestaine</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Alugaê. Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

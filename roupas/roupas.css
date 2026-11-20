@@ -1,0 +1,76 @@
+/* ============================================================
+   roupas.css — estilos exclusivos da página de catálogo
+   (usa os tokens, header, footer, .cards e .card do style.css)
+   ============================================================ */
+
+/* ---------- Cabeçalho da página ---------- */
+.page-title {
+  background: var(--tint);
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+.page-title h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: .3em; }
+.page-title p { color: var(--ink-soft); max-width: 36rem; margin: 0; font-size: 1.15rem; }
+
+.breadcrumb { font-size: .92rem; color: var(--ink-soft); margin-bottom: 1rem; }
+.breadcrumb a { text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ---------- Filtros (sem JavaScript: radios + :has) ---------- */
+.catalogo { padding-block: clamp(2rem, 5vw, 3.5rem); }
+
+.filtros {
+  display: flex; flex-wrap: wrap; gap: .6rem;
+  margin-bottom: 2rem;
+}
+.filtros input {
+  position: absolute; opacity: 0; pointer-events: none;
+}
+.filtros label {
+  cursor: pointer;
+  padding: .5rem 1.1rem;
+  border: 2px solid var(--line);
+  border-radius: 99px;
+  font-weight: 500;
+  transition: background .15s, border-color .15s, color .15s;
+}
+.filtros label:hover { border-color: var(--ink); }
+.filtros input:checked + label {
+  background: var(--ink); border-color: var(--ink); color: #fff;
+}
+.filtros input:focus-visible + label {
+  outline: 3px solid var(--accent); outline-offset: 3px;
+}
+
+.catalogo:has(#f-vestidos:checked) .card:not([data-cat="vestidos"]),
+.catalogo:has(#f-ternos:checked)   .card:not([data-cat="ternos"]),
+.catalogo:has(#f-smokings:checked) .card:not([data-cat="smokings"]),
+.catalogo:has(#f-calcados:checked) .card:not([data-cat="calcados"]) {
+  display: none;
+}
+
+/* ---------- Cards do catálogo ---------- */
+.card-cat { font-size: .85rem; color: var(--ink-soft); margin-bottom: .2rem; }
+
+.tag {
+  display: inline-block; align-self: flex-start;
+  padding: .15rem .65rem; margin-bottom: .8rem;
+  border-radius: 99px; font-size: .85rem; font-weight: 500;
+}
+.tag-ok      { background: #d8f0e8; color: var(--accent-dark); }
+.tag-poucas  { background: #fbeccb; color: #7a5200; }
+.tag-no      { background: #f6dcd9; color: #8a2b22; }
+
+.card .btn.btn-outline {
+  background: transparent; color: var(--ink); border-color: var(--ink);
+}
+.card .btn.btn-outline:hover { background: var(--ink); color: #fff; }
+
+/* ---------- Rodapé da lista ---------- */
+.catalogo-cta {
+  margin-top: 3rem; padding: 1.6rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+}
+.catalogo-cta p { margin: 0; font-weight: 500; }
