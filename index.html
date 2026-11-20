@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alugaê — Aluguel de roupas de gala</title>
+  <meta name="description" content="Vestidos, ternos, smokings e calçados para aluguel. Escolha a peça, o tamanho e a data do seu evento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Alugaê — página inicial">Alugaê</a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">Menu</label>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="roupas.html">Roupas</a>
+        <a href="sobre.html">Sobre o projeto</a>
+        <a class="btn btn-small" href="contato.html">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ 1. BANNER ============ -->
+    <section class="banner" aria-labelledby="banner-titulo">
+      <!-- Troque img/banner.svg pela sua imagem (ex.: img/banner.jpg, 1920x800) -->
+      <img class="banner-img" src="img/banner.svg" alt="Modelos vestindo roupas de gala">
+      <div class="banner-shade"></div>
+      <div class="container banner-content">
+        <h1 id="banner-titulo">A roupa certa para a sua noite de gala.</h1>
+        <p class="lead">Vestidos, ternos, smokings e calçados para aluguel. Escolha a peça, o tamanho e a data do seu evento.</p>
+        <a class="btn btn-light" href="roupas.html">Ver roupas</a>
+      </div>
+    </section>
+
+    <!-- ============ 2. CARDS DE ROUPAS ============ -->
+    <section class="section" aria-labelledby="roupas-titulo">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="roupas-titulo">Peças em destaque</h2>
+          <a class="link-more" href="roupas.html">Ver todas as peças</a>
+        </div>
+
+        <ul class="cards">
+          <li class="card">
+            <img src="img/vestido-longo.svg" alt="Vestido longo">
+            <div class="card-body">
+              <h3>Vestido longo</h3>
+              <p class="card-meta">Tamanhos: 38, 40, 44</p>
+              <p class="card-price">R$ 220 <span>por locação</span></p>
+              <a class="btn btn-small" href="roupas.html">Ver detalhes</a>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="img/terno-classico.svg" alt="Terno clássico">
+            <div class="card-body">
+              <h3>Terno clássico</h3>
+              <p class="card-meta">Tamanhos: 46, 48, 50, 52</p>
+              <p class="card-price">R$ 180 <span>por locação</span></p>
+              <a class="btn btn-small" href="roupas.html">Ver detalhes</a>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="img/smoking.svg" alt="Smoking com gravata borboleta">
+            <div class="card-body">
+              <h3>Smoking</h3>
+              <p class="card-meta">Tamanhos: 46, 48, 50</p>
+              <p class="card-price">R$ 250 <span>por locação</span></p>
+              <a class="btn btn-small" href="roupas.html">Ver detalhes</a>
+            </div>
+          </li>
+
+          <li class="card">
+            <img src="img/sapato-social.svg" alt="Sapato social">
+            <div class="card-body">
+              <h3>Sapato social</h3>
+              <p class="card-meta">Tamanhos: 38 ao 44</p>
+              <p class="card-price">R$ 60 <span>por locação</span></p>
+              <a class="btn btn-small" href="roupas.html">Ver detalhes</a>
+            </div>
+          </li>
+        </ul>
+        <p class="note">Peças, tamanhos e valores acima são exemplos da futura página de roupas.</p>
+      </div>
+    </section>
+
+    <!-- ============ 3. SERVIÇOS (fundo escuro, ícones de traço) ============ -->
+    <section class="services" aria-labelledby="servicos-titulo">
+      <div class="container">
+        <h2 id="servicos-titulo" class="visually-hidden">Nossos serviços</h2>
+
+        <ul class="services-grid">
+          <li>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M24 8 L32 18 L40 8 L52 14 L56 56 H38 V38 M26 38 V56 H8 L12 14 L24 8"/>
+              <path d="M32 18 L27 38 M32 18 L37 38 M32 18 V50"/>
+            </svg>
+            <h3>Ternos e Smokings</h3>
+            <p>Opções elegantes e sofisticadas para homens, em vários tamanhos.</p>
+          </li>
+
+          <li>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M24 6 L28 18 L24 28 L10 58 H54 L40 28 L36 18 L40 6"/>
+              <path d="M24 28 H40 M28 18 H36"/>
+            </svg>
+            <h3>Vestidos de Gala</h3>
+            <p>Vestidos longos para formaturas, casamentos e festas de gala.</p>
+          </li>
+
+          <li>
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <ellipse cx="30" cy="22" rx="14" ry="17"/>
+              <path d="M24 14 L32 24 M29 11 L36 19"/>
+              <rect x="6" y="44" width="46" height="11" rx="2"/>
+              <path d="M12 44 V50 M18 44 V48 M24 44 V50 M30 44 V48 M36 44 V50 M42 44 V48"/>
+              <path d="M52 46 a6 6 0 0 1 6 5 v0 a6 6 0 0 1 -6 4"/>
+            </svg>
+            <h3>Atendimento Consultivo</h3>
+            <p>Orientação profissional para escolher a peça e o tamanho ideais.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 4. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo logo-light" href="index.html">Alugaê</a>
+        <p>Aluguel de roupas de gala.</p>
+      </div>
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="footer-title">Páginas</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="roupas.html">Roupas</a></li>
+          <li><a href="sobre.html">Sobre o projeto</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-title">Projeto Integrador</h2>
+        <p>Engenharia de Software II<br>Prof. Celso Gallão<br>Fatec São Caetano do Sul – Antonio Russo</p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Equipe</h2>
+        <ul>
+          <li>Matheus Giovanelli</li>
+          <li>Lucas Toledo Porfírio</li>
+          <li>Daniel Voros Monteiro</li>
+          <li>Gabriel Alves Metestaine</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Alugaê. Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
