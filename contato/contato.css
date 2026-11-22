@@ -1,0 +1,62 @@
+/* ============ PÁGINA DE CONTATO ============
+   Depende do style.css (tokens, .container, .btn, .section, .note, header e footer). */
+
+/* ---- título da página ---- */
+.page-hero { background: var(--dark); color: #fff; padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.page-hero h1 { margin-bottom: .35em; }
+.page-hero .lead { max-width: 36rem; margin: 0; font-size: 1.15rem; color: #e8e1f8; }
+
+/* ---- layout ---- */
+.contact { background: var(--tint); }
+.contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.contact h2 { font-size: clamp(1.7rem, 3vw, 2.1rem); margin-bottom: 1rem; }
+
+/* ---- formulário ---- */
+.contact-form-wrap { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2.2rem); }
+.contact-form { display: grid; gap: 1.1rem; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.field { display: flex; flex-direction: column; gap: .35rem; min-width: 0; }
+.field label { font-weight: 500; font-size: .95rem; }
+.optional { font-weight: 400; color: var(--ink-soft); }
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%; font: inherit; color: var(--ink); background: var(--paper);
+  padding: .7rem .85rem; border: 1px solid #b9b0d3; border-radius: var(--radius);
+  transition: border-color .15s, box-shadow .15s;
+}
+.field textarea { resize: vertical; min-height: 9rem; }
+.field input::placeholder { color: #8b83a4; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: var(--accent); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible {
+  outline: 3px solid var(--lilac); outline-offset: 0; border-color: var(--accent);
+}
+.field input:user-invalid, .field select:user-invalid, .field textarea:user-invalid { border-color: #b3261e; }
+
+.form-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
+.form-actions .btn { cursor: pointer; font: inherit; font-weight: 700; }
+.form-status { margin: 0; font-size: .95rem; }
+.form-status.is-ok { color: #1b6b3a; font-weight: 500; }
+.form-status.is-error { color: #b3261e; font-weight: 500; }
+
+/* ---- canais de contato ---- */
+.info-list { display: grid; gap: 1.4rem; margin-bottom: 1.6rem; }
+.info-list li { display: flex; gap: 1rem; align-items: flex-start; }
+.info-list svg {
+  flex: none; width: 44px; height: 44px; padding: 10px; border-radius: 50%;
+  background: var(--accent); fill: none; stroke: #fff; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+}
+.info-list h3 { font-family: var(--font-body); font-size: 1rem; font-weight: 600; margin: 0 0 .15em; }
+.info-list p { margin: 0; color: var(--ink-soft); }
+.info-list a { color: var(--accent); font-weight: 500; }
+.contact-info .note { margin-top: 0; }
+
+/* ---- responsivo ---- */
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .field-row { grid-template-columns: 1fr; }
+  .form-actions .btn { width: 100%; text-align: center; }
+}

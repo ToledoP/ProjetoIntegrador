@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — Alugaê</title>
+  <meta name="description" content="Fale com a Alugaê: tire dúvidas, reserve uma peça ou peça ajuda para escolher o tamanho ideal para o seu evento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Fira+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../home/style.css">
+  <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../home/index.html" aria-label="Alugaê — página inicial"><img class="logo-img" src="../img/alugaeLogo.jpg">
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <label for="menu-toggle" class="menu-button">Menu</label>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="../home/index.html">Início</a>
+        <a href="../roupas/roupas.html">Roupas</a>
+        <a href="../sobre/sobre.html">Sobre o projeto</a>
+        <a href="cliente.html">Cadastrar Cliente</a>
+        <a class="btn btn-small" href="contato.html" aria-current="page">Fale conosco</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ TÍTULO DA PÁGINA ============ -->
+    <section class="page-hero" aria-labelledby="contato-titulo">
+      <div class="container">
+        <h1 id="contato-titulo">Fale conosco</h1>
+        <p class="lead">Tem dúvida sobre uma peça, tamanho ou data? Conte para nós o que você precisa e respondemos o mais rápido possível.</p>
+      </div>
+    </section>
+
+    <!-- ============ FORMULÁRIO + INFORMAÇÕES ============ -->
+    <section class="section contact" aria-label="Formulário e informações de contato">
+      <div class="container contact-grid">
+
+        <div class="contact-form-wrap">
+          <h2>Envie sua mensagem</h2>
+
+          <form id="form-contato" class="contact-form" action="#" method="post" novalidate>
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="telefone">Telefone / WhatsApp <span class="optional">(opcional)</span></label>
+                <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 90000-0000">
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>Reservar uma peça</option>
+                  <option>Dúvida sobre tamanhos</option>
+                  <option>Valores e prazos</option>
+                  <option>Outro assunto</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="data-evento">Data do evento <span class="optional">(opcional)</span></label>
+                <input type="date" id="data-evento" name="data-evento">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">Enviar mensagem</button>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <aside class="contact-info" aria-labelledby="info-titulo">
+          <h2 id="info-titulo">Outros canais</h2>
+
+          <ul class="info-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 7 9-7"/></svg>
+              <div>
+                <h3>E-mail</h3>
+                <p><a href="mailto:contato@alugae.com.br">contato@alugae.com.br</a></p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A15 15 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg>
+              <div>
+                <h3>Telefone / WhatsApp</h3>
+                <p><a href="tel:+551100000000">(11) 0000-0000</a></p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <div>
+                <h3>Endereço</h3>
+                <p>São Caetano do Sul – SP</p>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <div>
+                <h3>Horário de atendimento</h3>
+                <p>Segunda a sexta, das 9h às 18h<br>Sábado, das 9h às 13h</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="note">Telefone, e-mail e horários acima são exemplos e serão substituídos pelos dados reais da loja.</p>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 4. FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <a class="logo" href="../home/index.html" aria-label="Alugaê — página inicial"><img class="logo-img" src="../img/alugaeLogo.jpg">
+
+      <nav aria-label="Navegação do rodapé">
+        <h2 class="footer-title">Páginas</h2>
+        <ul>
+          <li><a href="../home/index.html">Início</a></li>
+          <li><a href="../roupas/roupas.html">Roupas</a></li>
+          <li><a href="../sobre/sobre.html">Sobre o projeto</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer-title">Projeto Integrador</h2>
+        <p>Engenharia de Software II<br>Jacinto Cansado<br>Fatec São Caetano do Sul – Antonio Russo</p>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Equipe</h2>
+        <ul>
+          <li>Matheus Giovanelli</li>
+          <li>Lucas Toledo Porfírio</li>
+          <li>Daniel Voros Monteiro</li>
+          <li>Gabriel Alves Metestaine</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Alugaê. Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas.</p>
+    </div>
+  </footer>
+
+
+  <script>
+    // Simulação do envio (sem back-end): valida e mostra confirmação.
+    (function () {
+      var form = document.getElementById('form-contato');
+      var status = document.getElementById('form-status');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.className = 'form-status';
+        if (!form.checkValidity()) {
+          status.textContent = 'Preencha nome, e-mail válido, assunto e mensagem para enviar.';
+          status.classList.add('is-error');
+          form.reportValidity();
+          return;
+        }
+        status.textContent = 'Mensagem enviada! Responderemos em breve.';
+        status.classList.add('is-ok');
+        form.reset();
+      });
+    })();
+  </script>
+
+</body>
+</html>
